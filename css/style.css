@@ -436,7 +436,7 @@ footer .box-container .box a i {
    
        }
        .home .content {
-        height: 30vh;
+        height: 60vh;
         width: 80vw;}
 }
 
@@ -450,5 +450,8 @@ footer .box-container .box a i {
      right: 27%;
 
     }
+    .home .content {
+        height: 60vh;
+        width: 80vw;}
 
 }
