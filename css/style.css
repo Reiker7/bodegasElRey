@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+    --main-logo:#E6E0C8;
+    --main-light:#F6F8F7;
+    --main-dark: #19191B;
+    --main-wine-light: #860D1B;
+    --main-wine-light2: #ac1527;
+    --main-wine-dark: #6A101B;
+    --text-light: #AAADB5;
+    --text-dark: #2B2B29;
+    --border:.1rem solid rgba(0,0,0,.1);
+    --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+}
+
+* {
+    font-family: 'Cinzel', serif;
+    box-sizing: border-box;
+    margin: 0; padding: 0;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    /* transition: all 1s ease-out; */
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 9rem;
+    /* overflow: hidden; */
+}
+
+section {
+    padding: 2rem 9%;
+}
+
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .8rem 3rem;
+    font-size: 1.7rem;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    background: var(--main-dark);
+    border-radius: .5rem;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+    position: relative;
+}
+
+.btn:hover {
+    background: var(--text-dark);
+}
+
+.top {
+    height: 4vh;
+    position: fixed;
+    z-index: 999;
+    top: 0; left: 0; right: 0;
+    width: 100vw;
+    background: var(--main-dark);
+    transition: none;
+}
+
+.header {
+    position: fixed;
+    top: 4vh; left: 0; right: 0;
+    z-index: 1000;
+    background-color: var(--main-light);
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 9%;
+    box-shadow: 5px 0px 2px 0px black;
+}
+
+.header .logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--text-dark);
+}
+
+.header .logo span {
+    color: var(--main-wine-dark);
+}
+
+.header picture .logoimg{
+    z-index: 1010;
+    position: fixed;
+    top: 2px;
+    display: flex;
+    height: 8rem;
+    width: 8rem;
+    border-radius: 50%;
+    background-image: url(/assets/img/logoRey.jpg);
+    background-size: 15rem 15rem;
+    background-position: center;
+    box-shadow: 0px 0px 5px 1px black;
+}
+
+.header picture .logoimg img{
+    width: 8rem;
+}
+
+.header .navbar {
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin-left: 2rem;
+}
+
+.header .navbar a {
+    color: var(--main-wine-dark);
+    margin-right: 1.5rem;
+}
+
+.header .navbar a:hover {
+    color: var(--main-wine-light2);
+    text-decoration: underline;
+    text-underline-offset: 8px;
+}
+
+
+#menu-btn {
+    display: none;
+    cursor: pointer;
+    font-size: 2.5rem;
+    padding: 1rem 1.3rem;
+    border-radius: .5rem;
+    color: var(--main-light);
+    background: var(--main-dark);
+}
+
+#menu-btn:hover {
+    background: var(--main-wine-light);
+}
+
+.topHome {
+    position: absolute;
+    top: -2px;
+    left: 0;
+    padding: 1rem;
+    z-index: 800;
+    width: 100%;
+    background-color: var(--main-wine-dark);
+    box-shadow: inset 0 0 15px 0 rgba(0,0,0,.3);
+    box-shadow: 0 0px 10px 5px black;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    top: 9rem;
+    position: relative;
+    background: url(/assets/img/homeBackground.webp) ;
+    background-size: cover ;
+    background-position: center;
+    height: 85vh;
+    color: var(--text-light); 
+    margin-bottom: 15vh;
+}
+
+.home .content {
+    height: 50vh;
+    width: 50%;
+    border-radius: 2rem;
+    padding: 4rem;
+    align-items: center;
+    background: url(/assets/img/vinos_institucionales.jpg) ;
+    background-position: 75% 15%;
+    position: relative;
+}
+
+.home .content h1{
+    font-size: 3rem;
+}
+
+.home .content p{
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    background: rgba(0, 0, 0,.09);
+    padding: 1rem 1rem 1rem 3rem;
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow);
+    text-transform: none;
+}
+
+.home .content a{
+    position: absolute;
+    bottom: 3rem;
+    right: 3rem;
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.gallery {
+
+    background: radial-gradient(circle, rgba(103,113,124,1) 0%, rgba(73,80,87,1) 50%, rgba(0,0,0,1) 100%),var(--text-dark);
+
+    padding: 0 ;
+
+}
+
+
+.gallery .box {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-size: cover !important;
+    background-position: center !important;
+    justify-content: flex-end;
+    padding: 2rem 9%;
+}
+
+.gallery .box.second{
+    justify-content: flex-start;
+}
+
+.gallery .box .content {
+    width: 50rem;
+}
+
+.gallery .box .content span{
+    font-size: 4rem;
+    color: var(--main-logo);
+    text-shadow: 1px 1px 2px black;
+}
+
+.gallery .box .content h3{
+    font-size: 4rem;
+    color: var(--main-wine-light2);
+    padding-top: .5rem;
+    text-transform: uppercase;
+    
+}
+
+.gallery .box .content p{
+    line-height: 2;
+    color: white;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    text-shadow: 1px 1px 2px black;
+}
+
+.shop {
+
+    background: linear-gradient(180deg, rgba(71,42,46,1) 14%, rgba(172,21,39,1) 100%);
+    color: white;
+}
+.shop h2 {
+    margin: 2rem;
+}
+
+.shop .shop-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(27rem, 1fr));
+    grid-column-gap: 8rem ;
+    grid-row-gap: 4rem
+}
+
+.shop .shop-container .box {
+    width: 340px;
+    
+}
+
+.shop .shop-container .box .picture{
+    border-radius: .5rem;
+    position: relative;
+    background: white;
+    height: 340px;
+    width: 100%;
+    text-align: center;
+    box-shadow: inset 0 0 10px #f8a100;
+    padding-top: 6px;
+}
+
+.shop .shop-container .box .picture img {
+    height: 300px;
+}
+
+.shop .shop-container .box .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+.shop .shop-container .box .content h3 {
+    font-size: 1.7rem;
+}
+
+.prize {
+    font-weight: bold;
+    color: #c6b2b4;
+    font-size: 1.4rem;
+    margin-top: .5rem;
+}
+
+.shop .shop-container .box .content .button {
+    background-color: var(--text-dark);
+    border-radius: .2rem;
+    margin-top: 1rem;
+    padding: .8rem 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #c6b2b4;
+}
+
+.shop .shop-container .box .content .button:hover {
+    background-color: var(--main-dark);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries  */
+
+@media (max-width:991px) {
+    html {
+        font-size: 55%;
+    }
+
+    .header {
+        padding: 2rem;
+    }
+}
+
+@media (max-width:768px) {
+    #menu-btn {
+        display: initial;
+    }
+
+    .header .navbar {
+        position: absolute;
+        top:115%; right: 2rem;
+        background-color: var(--main-light);
+        box-shadow: var(--box-shadow);
+        border: var(--main-dark);
+        border-radius: .5rem;
+        width: 30rem;
+        transform: sacale(0);
+        transform-origin: top right;
+        opacity: 0;
+    }
+
+    .header .navbar.active{
+        transform: sacale(1);
+        opacity: 1;
+    }
+
+    .header .navbar a {
+        font-size: 2rem;
+        display: block;
+        padding: 1rem;
+        margin: 1rem;
+        border-radius: .5rem;
+    }
+
+    .header .navbar a:hover {
+        color: var(--main-light);
+        background-color: var(--main-wine-light2);
+        text-decoration: none;
+    }
+
+    .header picture .logoimg{
+        right: 30%;
+   
+       }
+}
+
+@media (max-width:450px) {
+    html {
+        font-size: 50%;
+    }
+    .header picture .logoimg{
+     right: 27%;
+
+    }
+}
